@@ -5,7 +5,7 @@ import time
 
 URL = 'https://www.amazon.in/Conbre-MultipleXR2-V380-Ultra-Connectivity/dp/B07ZMKFXVL/ref=sr_1_1?dchild=1&keywords=camers&qid=1602653296&sr=8-1'
 
-headers ={"User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36'}
+headers ={"User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)  (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36'}  #update it 
 
 
 def check_price():
@@ -29,15 +29,15 @@ def send_mail():
     server.ehlo()
     server.starttls()
     server.ehlo()
-    server.login("somushukla190301@gmail.com", "uegnwtsbwptgssmg")
+    server.login("yourgmail@gmail.com", "yourpassword")
     subject="Price fell down"
     body= "Check the amazon price link  https://www.amazon.in/Conbre-MultipleXR2-V380-Ultra-Connectivity/dp/B07ZMKFXVL/ref=sr_1_1?dchild=1&keywords=camers&qid=1602653296&sr=8-1"
 
 
     msg = f"Subject: {subject}\n\n {body}"
 
-    server.sendmail('somushukla190301@gmail.com',
-        'akashshukla190301@gmail.com',
+    server.sendmail('senders gmail',
+        'receivers password',
         msg
     )
     print("Email has been sent")
